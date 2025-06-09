@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter your Range");
+        int number=scanner.nextInt();
+        if(number>=10&&number<=100){
+            System.out.println("The given value is within range");
+        }
+        else{
+            System.out.println("The given value is not in range");
+        }
+        }
+    }
