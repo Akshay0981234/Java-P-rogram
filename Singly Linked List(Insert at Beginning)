@@ -1,0 +1,74 @@
+// Singly linked list Insert at beginning
+
+class Node{
+    int data;
+    Node next;
+    
+    // creating a constructor 
+    
+    Node(int data){
+        
+        this.data = data;
+        this.next = null;
+    }
+
+}
+
+public class SinglyLinkedList{
+    
+    Node head = null;
+    
+    // insertAtBeg Method 
+    
+    public void insertAtBeg(int data){
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head=newNode;
+    }
+    
+    
+    
+    //insertAtend 
+    
+    public void insertAtend(int data){
+        Node newNode = new Node(data);
+        
+        Node temp = head;
+        while(temp.next!=null){
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
+    
+    // Display Method 
+    
+    public void display(){
+        Node temp = head;
+        while(temp!=null){
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        
+        System.out.print("null");
+    }
+    
+    
+    public static void main(String[] args){
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.insertAtBeg(10);
+        list.insertAtBeg(20);
+        list.insertAtBeg(30);
+        list.insertAtBeg(40);
+        list.insertAtBeg(50);
+        list.insertAtBeg(60);
+        list.insertAtend(100);
+        list.insertAtend(200);
+        list.insertAtBeg(88);
+        list.insertAtend(12);
+        
+        list.display();
+    }
+    
+    
+}
